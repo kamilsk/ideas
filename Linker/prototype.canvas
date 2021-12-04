@@ -1,15 +1,17 @@
 {
 	"nodes":[
 		{"type":"text","text":"Link ↔︎ Context\n\n```go\nstruct {\n\tLink    *Link\n\tContext *Context\n}\n```\n","id":"48bb6e16f6202d12","x":240,"y":-240,"width":300,"height":200},
-		{"type":"text","text":"Context\n\n```go\nstruct {\n\tParent      *Context\n\tTopic       string\n\tDescription string\n}\n```\n","id":"520d25f52148db49","x":620,"y":-255,"width":367,"height":230},
+		{"type":"text","text":"Context\n\n```go\nstruct {\n\tParent *Context\n\tName   string\n\tTopic  string\n}\n```\n","id":"520d25f52148db49","x":620,"y":-255,"width":367,"height":230},
 		{"type":"text","text":"Link ↔︎ Link\n\n```go\nstruct {\n\tSrc, Dst *Link\n}\n```\n\n```go\nstruct {\n\tLink *Link\n\tRef  *Link\n}\n```","id":"d00278bb09ebae33","x":-180,"y":140,"width":340,"height":280},
 		{"type":"text","text":"e.g., Go and databases → ORM research","id":"af19474b9812f6dd","x":620,"y":0,"width":367,"height":60},
 		{"type":"text","text":"e.g.,\nORM research → [Awesome Go](https://awesome-go.com/orm/)\nORM research → [ent](https://github.com/ent/ent)","id":"0d8f599bcd3dca9d","x":240,"y":0,"width":300,"height":120},
 		{"type":"text","text":"Link\n\n```go\nstruct {\n\tUrl  url.URL\n\tHost string\n\tPath string\n\tCode int\n}\n```\n","id":"f3b0b62633e8a230","x":-180,"y":-258,"width":340,"height":237},
 		{"type":"text","text":"e.g., https://github.com/ent/ent","id":"00e6e542602169a5","x":-180,"y":-340,"width":340,"height":60},
-		{"type":"text","text":"Content (Document)\n\n```go\nstruct GitHub {\n\tLink        *Link\n\tOwner       string\n\tRepository  string\n\tDescription string\n\tWebsite     string\n\tTopics      []string\n}\n```\n\n```go\nstruct HTML {\n\tLink  *Link\n\tTitle string\n\tMeta  map[string]string\n\tBody  string\n}\n```\n","id":"e3a4c5e668f8c16c","x":-640,"y":-355,"width":360,"height":430},
-		{"type":"text","text":"e.g.,\n```json\n{\n  \"link\": \"uuid:https://github...\",\n  \"owner\": \"ent\",\n  \"repository\": \"ent\",\n  \"is_org\": true,\n  \"description\": \"An entity...\",\n  \"website\": \"https://entgo.io\",\n  \"topics\": [\"orm\", \"ent\",]\n}\n```\n","id":"08e194829aab8816","x":-640,"y":100,"width":360,"height":320},
-		{"type":"text","text":"e.g.,\nhttps://awesome-go.com →\nhttps://github.com/ent/ent →\nhttps://entgo.io","id":"f2aa371da80d5bae","x":-180,"y":440,"width":340,"height":140}
+		{"type":"text","text":"Content (Document)\n\n```go\nstruct GitHub {\n\tLink        *Link\n\tOwner       string\n\tName        string\n\tDescription string\n\tWebsite     string\n\tTopics      []string\n}\n```\n\n```go\nstruct HTML {\n\tLink  *Link\n\tTitle string\n\tMeta  map[string]string\n\tBody  string\n}\n```\n","id":"e3a4c5e668f8c16c","x":-640,"y":-355,"width":360,"height":430},
+		{"type":"text","text":"e.g.,\n```json\n{\n  \"link\": \"uuid:https://github...\",\n  \"owner\": \"ent\",\n  \"name\": \"ent\",\n  \"is_org\": true,\n  \"description\": \"An entity...\",\n  \"website\": \"https://entgo.io\",\n  \"topics\": [\"orm\", \"ent\",]\n}\n```\n","id":"08e194829aab8816","x":-640,"y":100,"width":360,"height":320},
+		{"type":"text","text":"e.g.,\nhttps://awesome-go.com →\nhttps://github.com/ent/ent →\nhttps://entgo.io","id":"f2aa371da80d5bae","x":-180,"y":440,"width":340,"height":140},
+		{"type":"text","text":"### CLI\n\n#### Working with contexts\n\n```bash\n$ linker context\n> Global\n> └── Go and databases\n\n$ linker context add --parent=uuid 'ORM Research'\n> d4ec93e2-abd6-46ca-a1b8-3b3f88da0eee\n\n$ linker context set uuid|name\n> Switched to context \"ORM Research\".\n\n$ linker context unset\n> Switched to global context.\n```\n\n#### Working with links\n\n```bash\n$ linker add https://github.com/ent/ent\n> db41d1f9-b402-4593-8c79-6f406c1ce22e\n\n$ linker lookup link|uuid\n> Context: Awesome Go \\ ORM research\n> Labels: orm, ent\n> Related:\n> - https://entgo.io\n```\n","id":"595bf26e75c966a6","x":-180,"y":-1080,"width":720,"height":640},
+		{"type":"text","text":"Label\n\n```go\nstruct {\n\tName        string\n\tDescription string\n\tColor       HEX\n}\n```\n","id":"3508e9a91e875a3a","x":390,"y":280,"width":367,"height":205}
 	],
 	"edges":[
 		{"id":"a6abf958bbb44a24","fromNode":"48bb6e16f6202d12","fromSide":"right","toNode":"520d25f52148db49","toSide":"left"},

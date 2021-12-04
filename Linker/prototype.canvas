@@ -1,0 +1,20 @@
+{
+	"nodes":[
+		{"type":"text","text":"Link ↔︎ Context\n\n```go\nstruct {\n\tLink    *Link\n\tContext *Context\n}\n```\n","id":"48bb6e16f6202d12","x":240,"y":-240,"width":300,"height":200},
+		{"type":"text","text":"Context\n\n```go\nstruct {\n\tParent      *Context\n\tTopic       string\n\tDescription string\n}\n```\n","id":"520d25f52148db49","x":620,"y":-255,"width":367,"height":230},
+		{"type":"text","text":"Link ↔︎ Link\n\n```go\nstruct {\n\tSrc, Dst *Link\n}\n```\n\n```go\nstruct {\n\tLink *Link\n\tRef  *Link\n}\n```","id":"d00278bb09ebae33","x":-180,"y":140,"width":340,"height":280},
+		{"type":"text","text":"e.g., Go and databases → ORM research","id":"af19474b9812f6dd","x":620,"y":0,"width":367,"height":60},
+		{"type":"text","text":"e.g.,\nORM research → [Awesome Go](https://awesome-go.com/orm/)\nORM research → [ent](https://github.com/ent/ent)","id":"0d8f599bcd3dca9d","x":240,"y":0,"width":300,"height":120},
+		{"type":"text","text":"Link\n\n```go\nstruct {\n\tUrl  url.URL\n\tHost string\n\tPath string\n\tCode int\n}\n```\n","id":"f3b0b62633e8a230","x":-180,"y":-258,"width":340,"height":237},
+		{"type":"text","text":"e.g., https://github.com/ent/ent","id":"00e6e542602169a5","x":-180,"y":-340,"width":340,"height":60},
+		{"type":"text","text":"Content (Document)\n\n```go\nstruct GitHub {\n\tLink        *Link\n\tOwner       string\n\tRepository  string\n\tDescription string\n\tWebsite     string\n\tTopics      []string\n}\n```\n\n```go\nstruct HTML {\n\tLink  *Link\n\tTitle string\n\tMeta  map[string]string\n\tBody  string\n}\n```\n","id":"e3a4c5e668f8c16c","x":-640,"y":-355,"width":360,"height":430},
+		{"type":"text","text":"e.g.,\n```json\n{\n  \"link\": \"uuid:https://github...\",\n  \"owner\": \"ent\",\n  \"repository\": \"ent\",\n  \"is_org\": true,\n  \"description\": \"An entity...\",\n  \"website\": \"https://entgo.io\",\n  \"topics\": [\"orm\", \"ent\",]\n}\n```\n","id":"08e194829aab8816","x":-640,"y":100,"width":360,"height":320},
+		{"type":"text","text":"e.g.,\nhttps://awesome-go.com →\nhttps://github.com/ent/ent →\nhttps://entgo.io","id":"f2aa371da80d5bae","x":-180,"y":440,"width":340,"height":140}
+	],
+	"edges":[
+		{"id":"a6abf958bbb44a24","fromNode":"48bb6e16f6202d12","fromSide":"right","toNode":"520d25f52148db49","toSide":"left"},
+		{"id":"b4bee99b1c029398","fromNode":"48bb6e16f6202d12","fromSide":"left","toNode":"f3b0b62633e8a230","toSide":"right"},
+		{"id":"c4455eb39312a849","fromNode":"d00278bb09ebae33","fromSide":"top","toNode":"f3b0b62633e8a230","toSide":"bottom","fromEnd":"arrow"},
+		{"id":"f1f40c80b7499a51","fromNode":"e3a4c5e668f8c16c","fromSide":"right","toNode":"f3b0b62633e8a230","toSide":"left"}
+	]
+}

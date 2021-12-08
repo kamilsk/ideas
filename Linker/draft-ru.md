@@ -1,5 +1,7 @@
 # Черновик
 
+[![Open Source Guide. Linker, what is it](https://img.youtube.com/vi/_J5DlvUwPUM/0.jpg)](https://youtu.be/_J5DlvUwPUM)
+
 ## Проблематика
 
 Текущая картина:

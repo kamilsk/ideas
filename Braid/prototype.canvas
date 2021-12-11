@@ -1,0 +1,32 @@
+{
+	"nodes":[
+		{"type":"text","text":"## Command interface","id":"49a25dbc03563827","x":0,"y":-240,"width":1139,"height":60,"color":"5"},
+		{"type":"text","text":"### Создать новый тред\n\n- просит ввести описание контекса (корневое сообщение)\n- сразу провязывает внешние источники\n\t- конкретные ветки комментариев\n\t- все комментарии\n- если указать ссылку на сообщение внутри треда в Slack, то делает по-сути изоляцию нового контекста для обсуждения\n- если указать ссылку на верхнеуровневую сущность (issue, loom, etc.), то каждая ветка там превращается в тред в чате\n\n```\n/braid new thread https://linear.app/...\n```\n","id":"30f89f99df08f8b9","x":0,"y":-140,"width":559,"height":480},
+		{"type":"text","text":"## Emoji workflow\n\n❗️ - важно\n‼️ - критично\n❓ - есть вопрос\n⁉️ - требует обсуждения\n\n👀 - in progress\n⏸️ - on hold\n🚧 - blocked\n✅ - done\n❌ - won't do\n\n🧵 - отдельный тред\n🔒 - закрытое обсуждение\n☠️ - закрытый тред","id":"e759b43786794a3e","x":-460,"y":-240,"width":410,"height":580,"color":"4"},
+		{"type":"text","text":"### Привязать/отвязать контекст\n\n- начинает отслеживать все изменения в контексте\n- транслирует их напрямую в тред\n- в самом контексте даёт референс на обсуждение\n\n```\n/braid thread attach https://linear.app/...\n/braid thread detach https://linear.app/...\n```\n\n- каждая ветка обсуждения автоматически привязывается к треду, если `new thread` указывал на верхнеуровневую сущность","id":"86a3a3742f5bec17","x":580,"y":-140,"width":559,"height":480},
+		{"type":"text","text":"blocked [🚧]","id":"36bc6a232307c964","x":-345,"y":640,"width":165,"height":60},
+		{"type":"text","text":"in progress [👀]","id":"5b15c35fef485785","x":-180,"y":780,"width":180,"height":60},
+		{"type":"text","text":"todo [❗️ / ‼️]","id":"919507cb7f1834ce","x":-165,"y":500,"width":150,"height":60},
+		{"type":"text","text":"done [✅]","id":"79fecf4ef98059ce","x":-165,"y":980,"width":150,"height":60},
+		{"type":"text","text":"thread","id":"be90c6af4b4cc489","x":-165,"y":400,"width":150,"height":60,"color":"2"},
+		{"type":"text","text":"workflow","id":"1d4c70dd16b96a1d","x":-460,"y":400,"width":60,"height":640,"color":"6"},
+		{"type":"text","text":"🧵","id":"43dce8817c5d9daf","x":280,"y":640,"width":65,"height":60},
+		{"type":"text","text":"⁉️","id":"4440058a6004829f","x":40,"y":640,"width":65,"height":60},
+		{"type":"text","text":"⏸️","id":"69293fc0e2c9173b","x":160,"y":640,"width":65,"height":60},
+		{"type":"text","text":"won't do [❌]","id":"bce542afd1c44925","x":40,"y":880,"width":162,"height":60}
+	],
+	"edges":[
+		{"id":"17a88fc3be53d9af","fromNode":"be90c6af4b4cc489","fromSide":"bottom","toNode":"919507cb7f1834ce","toSide":"top"},
+		{"id":"63bb74a065fcaf0d","fromNode":"919507cb7f1834ce","fromSide":"bottom","toNode":"5b15c35fef485785","toSide":"top"},
+		{"id":"c677e188f082a4bd","fromNode":"5b15c35fef485785","fromSide":"bottom","toNode":"79fecf4ef98059ce","toSide":"top"},
+		{"id":"af8c06f7559f72cb","fromNode":"919507cb7f1834ce","fromSide":"left","toNode":"36bc6a232307c964","toSide":"top","fromEnd":"arrow"},
+		{"id":"69c049485d310490","fromNode":"5b15c35fef485785","fromSide":"left","toNode":"36bc6a232307c964","toSide":"bottom","fromEnd":"arrow"},
+		{"id":"09039ccc3f162127","fromNode":"5b15c35fef485785","fromSide":"right","toNode":"69293fc0e2c9173b","toSide":"bottom","label":"❓"},
+		{"id":"23dcd95c1dfddbc6","fromNode":"69293fc0e2c9173b","fromSide":"top","toNode":"919507cb7f1834ce","toSide":"right"},
+		{"id":"c58e7d9a4f3d89fb","fromNode":"5b15c35fef485785","fromSide":"bottom","toNode":"bce542afd1c44925","toSide":"left"},
+		{"id":"0cc81b9fee46bd83","fromNode":"5b15c35fef485785","fromSide":"right","toNode":"43dce8817c5d9daf","toSide":"bottom","label":"message"},
+		{"id":"b0e0cf1142f6a7bc","fromNode":"43dce8817c5d9daf","fromSide":"top","toNode":"be90c6af4b4cc489","toSide":"right","label":"create new and link"},
+		{"id":"c0c1f30bf3af042a","fromNode":"5b15c35fef485785","fromSide":"right","toNode":"4440058a6004829f","toSide":"bottom"},
+		{"id":"0c5c87ec0058ca51","fromNode":"4440058a6004829f","fromSide":"left","toNode":"36bc6a232307c964","toSide":"right"}
+	]
+}

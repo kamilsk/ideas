@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"6b211c4fbedbb78c","x":-440,"y":-160,"width":250,"height":60,"type":"text","text":"Telegram"},
+		{"id":"2a288bbac8137ad5","x":-440,"y":-60,"width":250,"height":60,"type":"text","text":"Slack"},
+		{"id":"b42338f26bac99bc","x":-440,"y":40,"width":250,"height":60,"type":"text","text":"Browser tabs"},
+		{"id":"412898fee0cf2ea8","x":-100,"y":-60,"width":250,"height":60,"type":"text","text":"Beads"},
+		{"id":"680be827e588535c","x":240,"y":-60,"width":250,"height":60,"type":"text","text":"Notion"},
+		{"id":"39558358344270ed","x":240,"y":-160,"width":250,"height":60,"type":"text","text":"Miro"},
+		{"id":"dbd61f49e3d67246","x":240,"y":40,"width":250,"height":60,"type":"text","text":"Airtable"},
+		{"id":"d7ff49f8f7dd51a5","x":-100,"y":100,"width":250,"height":60,"type":"text","text":"Linker"}
+	],
+	"edges":[
+		{"id":"31b0327144c7ce8f","fromNode":"6b211c4fbedbb78c","fromSide":"right","toNode":"412898fee0cf2ea8","toSide":"left"},
+		{"id":"f4e14603363c274d","fromNode":"2a288bbac8137ad5","fromSide":"right","toNode":"412898fee0cf2ea8","toSide":"left"},
+		{"id":"336bdfac7abaa05f","fromNode":"b42338f26bac99bc","fromSide":"right","toNode":"412898fee0cf2ea8","toSide":"left"},
+		{"id":"756dd53d63ff96df","fromNode":"412898fee0cf2ea8","fromSide":"bottom","toNode":"d7ff49f8f7dd51a5","toSide":"top","fromEnd":"arrow"},
+		{"id":"2c059c1ef7d5e684","fromNode":"412898fee0cf2ea8","fromSide":"right","toNode":"39558358344270ed","toSide":"left"},
+		{"id":"c747caaeb5249c3f","fromNode":"412898fee0cf2ea8","fromSide":"right","toNode":"680be827e588535c","toSide":"left"},
+		{"id":"f853d4d08277aaab","fromNode":"412898fee0cf2ea8","fromSide":"right","toNode":"dbd61f49e3d67246","toSide":"left"}
+	]
+}
